@@ -9,7 +9,6 @@ class DisplayImagePage extends StatefulWidget {
 
 class _DisplayImagePageState extends State<DisplayImagePage> {
   List<Map<String, dynamic>> imageList = [];
-
   @override
   void initState() {
     super.initState();
