@@ -17,7 +17,7 @@ class _DisplayImagePageState extends State<DisplayImagePage> {
   }
 
   Future<void> fetchImages() async {
-    final response = await http.get(Uri.parse("http://10.10.24.16/flutter_image/fetch_images.php"));
+    final response = await http.get(Uri.parse("http://10.10.24.41/flutter_image/fetch_images.php"));
 
     if (response.statusCode == 200) {
       final List<dynamic> jsonData = jsonDecode(response.body);
@@ -40,7 +40,7 @@ class _DisplayImagePageState extends State<DisplayImagePage> {
         itemCount: imageList.length,
         itemBuilder: (context, index) {
           final imageInfo = imageList[index];
-          final imageUrl = "http://10.10.24.16/flutter_image/uploads/${imageInfo['file_name']}";
+          final imageUrl = "http://10.10.24.41/flutter_image/uploads/${imageInfo['file_name']}";
 
           return ListTile(
             title: Text(imageInfo['description']),
